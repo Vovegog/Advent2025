@@ -1,11 +1,11 @@
 def password_finder():
-    import os
     from pathlib import Path
 
-    root = Path(__file__).parent.parent
-    print("Path: ", root)
-    puzzle_input = (root / "Puzzle Inputs" / "day1.txt").resolve()
-    print("Puzzle Input Path: ", puzzle_input)
+    cwd = Path(__file__)
+    print(f"Current directory: {cwd}")
+
+    puzzle_input = (cwd.parent.parent/"Puzzle Inputs"/"day1.txt")
+    print(f"Puzzle input path: {puzzle_input}")
 
 
     with open(puzzle_input, "r") as file:
